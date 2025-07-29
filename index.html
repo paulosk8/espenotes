@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/app.css" />
-    <script src="js/app.js"></script>
+    <script src="src/js/app.js"></script>
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -62,13 +62,54 @@
       </div>
       <main class="mdl-layout__content">
         <div class="page-content">
-          <a href=""></a>
+          <div id="main">
+            <div id="main">
+              <div class="card-wide mdl-card page-index">
+                <div class="svg--container">
+                  <div></div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1440 320"
+                  >
+                    <path
+                      fill="#1a4d80"
+                      fill-opacity="0.5"
+                      d="M0,0L720,160L1440,160L1440,320L720,320L0,320Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="page--initial">
+                  <i class="material-icons">emoji_objects</i>
+                  <div class="description">
+                    Si no quieres olvidarte de una idea, mensaje, palabra,
+                    etc... publicala y hazlo persistente.
+                  </div>
+                </div>
+                <div class="page--initial">
+                  <i class="material-icons">add_a_photo</i>
+                  <div class="description">
+                    Si no quieres perder fotos que tomaste de lugares, personas
+                    y eventos que te gustaron, publicala para que no se pierda.
+                  </div>
+                </div>
+                <div class="page--initial">
+                  <i class="material-icons">ondemand_video</i>
+                  <div class="description">
+                    Si no quieres escribir y solo deseas grabar un video o un
+                    audio, tambien puedes hacerlo y volverlo un recuerdo para
+                    siempre.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- Boton add -->
         <div class="floating-button">
           <!-- Colored FAB button -->
           <button
             class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+            id="btn-upload-post"
           >
             <i class="material-icons">add</i>
           </button>
