@@ -27,7 +27,7 @@ window.addEventListener("load", async () => {
   BTN_CANCEL_POST = document.querySelector("#btn-post-cancel");
   BTN_CANCEL_POST.addEventListener("click", closePostModal); // Asigna el evento al botón de cerrar post
   if ("serviceWorker" in navigator) {
-    const res = await navigator.serviceWorker.register("../sw.js");
+    const res = await navigator.serviceWorker.register("/sw.js");
     if (res) {
       console.log("Service Worker registered successfully");
     }
