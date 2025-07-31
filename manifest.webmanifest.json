@@ -7,8 +7,8 @@
   "theme_color": "#1a4d80",
   "orientation": "portrait",
   "display": "standalone",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/espenotes/",
+  "scope": "/espenotes/",
   "icons": [
     {
       "src": "src/img/icons/icon-144x144.png",
