@@ -38,4 +38,14 @@ window.addEventListener("load", async () => {
       console.log("Service Worker registered successfully");
     }
   }
+  const bannerInstall = document.querySelector("#banner-install");
+  bannerInstall.addEventListener("click", async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt(); // Muestra el prompt de instalación
+      const response = await deferredPrompt.userChoice; // Espera a que el usuario elija
+      if (response.outcome === "accepted") {
+        console.log("User accepted the installation prompt");
+      }
+    }
+  });
 });
