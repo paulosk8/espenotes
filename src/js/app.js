@@ -3,7 +3,7 @@ let MAIN;
 let MODAL_POST;
 let BTN_SHOW_POST;
 let BTN_CANCEL_POST;
-
+let deferredPrompt;
 // Funciones
 const showPostModal = () => {
   MAIN.style.display = "none"; // Oculta el contenido principal
@@ -18,6 +18,12 @@ const closePostModal = () => {
   MODAL_POST.style.transform = "translateY(100vh)"; // Oculta el modal con animación
 };
 
+window.addEventListener("beforeinstallprompt", (e) => {
+  console.log("Evento por defecto anulado");
+  e.preventDefault(); // Previene el comportamiento por defecto
+  deferredPrompt = e; // Guarda el evento para usarlo más tarde
+});
+
 // Cuando se carga el DOM
 window.addEventListener("load", async () => {
   MAIN = document.querySelector("#main");
@@ -27,7 +33,7 @@ window.addEventListener("load", async () => {
   BTN_CANCEL_POST = document.querySelector("#btn-post-cancel");
   BTN_CANCEL_POST.addEventListener("click", closePostModal); // Asigna el evento al botón de cerrar post
   if ("serviceWorker" in navigator) {
-    const res = await navigator.serviceWorker.register("/espenotes/sw.js");
+    const res = await navigator.serviceWorker.register("/sw.js");
     if (res) {
       console.log("Service Worker registered successfully");
     }

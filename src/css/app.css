@@ -93,3 +93,14 @@
   padding: 10px;
   width: calc(var(--width) - 20px);
 }
+
+.app--install {
+  background-color: var(--secondary);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+}
+
+.app--install:hover {
+  background-color: var(--dark-primary);
+}
